@@ -6,7 +6,7 @@ var {ToDo} = require('./models/todo');
 var {User} = require('./models/user');
 const {MongoClient , ObjectID} = require('mongodb');
 
-
+const port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyParser.json());
 
@@ -67,6 +67,6 @@ id = request.params.id;
 
 
 
-app.listen(3000 , ()=>{
+app.listen(port , ()=>{
   console.log("Server Started");
 })
